@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AeroLink Logistics | Transporte de carga nacional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Outfit','sans-serif']},colors:{ink:'#120a3a',violet:'#7c3aed',aqua:'#22d3ee'}}}}</script>
+<style>
+  html{scroll-behavior:smooth}
+  .glass{background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.28);box-shadow:0 8px 32px rgba(10,5,50,.35)}
+  .glass-strong{background:rgba(255,255,255,.2);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.4);box-shadow:0 12px 40px rgba(10,5,50,.4)}
+  .field{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:14px;padding:.75rem 1rem;width:100%;outline:none}
+  .field::placeholder{color:rgba(255,255,255,.65)}
+  .field:focus{border-color:#22d3ee;box-shadow:0 0 0 3px rgba(34,211,238,.35)}
+  .field option{color:#120a3a}
+  a:focus-visible,button:focus-visible{outline:3px solid #22d3ee;outline-offset:3px}
+</style>
+</head>
+<body class="font-sans text-white bg-ink antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 px-4 pt-4">
+  <nav class="glass mx-auto max-w-6xl rounded-2xl px-5 py-3 flex items-center justify-between">
+    <a href="#inicio" class="flex items-center gap-2 text-xl font-bold"><i class="bi bi-box-seam text-aqua text-2xl"></i>AeroLink</a>
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <li><a class="hover:text-aqua" href="#servicios">Servicios</a></li>
+      <li><a class="hover:text-aqua" href="#proceso">Cómo funciona</a></li>
+      <li><a class="hover:text-aqua" href="#flota">Flota</a></li>
+      <li><a class="hover:text-aqua" href="#opiniones">Clientes</a></li>
+      <li><a class="rounded-full bg-white/90 text-ink px-5 py-2 font-semibold hover:bg-aqua" href="#cotizar">Cotizar envío</a></li>
+    </ul>
+    <button id="burger" class="md:hidden text-3xl leading-none" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobileMenu" class="glass-strong hidden md:hidden mx-auto max-w-6xl mt-2 rounded-2xl p-5">
+    <ul class="flex flex-col gap-4 text-lg font-medium">
+      <li><a href="#servicios">Servicios</a></li><li><a href="#proceso">Cómo funciona</a></li>
+      <li><a href="#flota">Flota</a></li><li><a href="#opiniones">Clientes</a></li>
+      <li><a class="block text-center rounded-full bg-white text-ink py-3 font-semibold" href="#cotizar">Cotizar envío</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-28 pb-16">
+  <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1800&q=80" data-kw="truck,highway" alt="Camión de carga en carretera" class="absolute inset-0 h-full w-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-br from-ink/90 via-violet/55 to-aqua/30"></div>
+  <div class="relative mx-auto max-w-6xl px-5 grid lg:grid-cols-2 gap-10 items-center w-full">
+    <div>
+      <span class="glass inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm"><i class="bi bi-geo-alt-fill text-aqua"></i> Cobertura en 24 estados</span>
+      <h1 class="mt-6 text-4xl sm:text-6xl font-extrabold leading-[1.05]">Tu carga llega transparente, rápida y a tiempo.</h1>
+      <p class="mt-5 text-lg text-white/85 max-w-xl">Transporte terrestre y consolidado de mercancías con seguimiento en tiempo real, desde un paquete hasta un tráiler completo.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#cotizar" class="rounded-full bg-aqua text-ink font-semibold px-7 py-3.5 hover:bg-white transition">Solicitar cotización</a>
+        <a href="#servicios" class="glass rounded-full font-semibold px-7 py-3.5 hover:bg-white/25 transition">Ver servicios</a>
+      </div>
+    </div>
+    <form id="cotizar" class="glass-strong rounded-3xl p-6 sm:p-8 space-y-4" onsubmit="event.preventDefault();this.querySelector('button').textContent='¡Solicitud enviada!'">
+      <h2 class="text-2xl font-bold">Cotiza tu envío</h2>
+      <input class="field" placeholder="Ciudad de origen" required>
+      <input class="field" placeholder="Ciudad de destino" required>
+      <div class="grid grid-cols-2 gap-3">
+        <input class="field" type="number" min="1" placeholder="Peso (kg)" required>
+        <select class="field"><option>Paquetería</option><option>Carga parcial</option><option>Tráiler completo</option></select>
+      </div>
+      <input class="field" type="email" placeholder="Correo electrónico" required>
+      <button class="w-full rounded-xl bg-white text-ink font-bold py-3.5 hover:bg-aqua transition">Calcular tarifa</button>
+    </form>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="relative py-24 bg-gradient-to-b from-ink to-[#1e1160] overflow-hidden">
+  <div class="absolute -top-20 -left-20 h-80 w-80 rounded-full bg-violet/60 blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-aqua/30 blur-3xl"></div>
+  <div class="relative mx-auto max-w-6xl px-5">
+    <h2 class="text-3xl sm:text-5xl font-bold max-w-2xl">Soluciones de transporte para cada tipo de carga</h2>
+    <div class="mt-12 grid md:grid-cols-3 gap-6">
+      <article class="glass rounded-3xl p-7"><i class="bi bi-truck text-4xl text-aqua"></i><h3 class="mt-4 text-xl font-semibold">Carga completa</h3><p class="mt-2 text-white/80">Tráileres de 53 pies y rabones para grandes volúmenes con ruta directa.</p></article>
+      <article class="glass rounded-3xl p-7"><i class="bi bi-boxes text-4xl text-aqua"></i><h3 class="mt-4 text-xl font-semibold">Carga consolidada</h3><p class="mt-2 text-white/80">Paga solo el espacio que usas y comparte ruta con otros envíos.</p></article>
+      <article class="glass rounded-3xl p-7"><i class="bi bi-snow2 text-4xl text-aqua"></i><h3 class="mt-4 text-xl font-semibold">Cadena de frío</h3><p class="mt-2 text-white/80">Unidades refrigeradas con monitoreo continuo de temperatura.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="relative py-24 overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80" data-kw="warehouse,logistics" alt="Almacén logístico" class="absolute inset-0 h-full w-full object-cover">
+  <div class="absolute inset-0 bg-ink/75"></div>
+  <div class="relative mx-auto max-w-6xl px-5">
+    <h2 class="text-3xl sm:text-5xl font-bold">Cuatro pasos, cero complicaciones</h2>
+    <ol class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <li class="glass rounded-2xl p-6"><span class="text-aqua text-3xl font-extrabold">1</span><h3 class="mt-2 font-semibold text-lg">Cotizas</h3><p class="text-white/80 mt-1 text-sm">Recibe tu tarifa en minutos.</p></li>
+      <li class="glass rounded-2xl p-6"><span class="text-aqua text-3xl font-extrabold">2</span><h3 class="mt-2 font-semibold text-lg">Recolectamos</h3><p class="text-white/80 mt-1 text-sm">Pasamos por tu bodega.</p></li>
+      <li class="glass rounded-2xl p-6"><span class="text-aqua text-3xl font-extrabold">3</span><h3 class="mt-2 font-semibold text-lg">Rastreas</h3><p class="text-white/80 mt-1 text-sm">Ubicación en vivo desde tu celular.</p></li>
+      <li class="glass rounded-2xl p-6"><span class="text-aqua text-3xl font-extrabold">4</span><h3 class="mt-2 font-semibold text-lg">Entregamos</h3><p class="text-white/80 mt-1 text-sm">Con evidencia digital firmada.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FLOTA -->
+<section id="flota" class="relative py-24 bg-gradient-to-b from-[#1e1160] to-ink overflow-hidden">
+  <div class="absolute top-10 right-0 h-72 w-72 rounded-full bg-aqua/25 blur-3xl"></div>
+  <div class="relative mx-auto max-w-6xl px-5 grid md:grid-cols-2 gap-10 items-center">
+    <div class="glass rounded-3xl p-3"><img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1200&q=80" data-kw="truck,road" alt="Flota de camiones" class="rounded-2xl w-full h-80 object-cover"></div>
+    <div>
+      <h2 class="text-3xl sm:text-5xl font-bold">Una flota moderna y monitoreada</h2>
+      <p class="mt-4 text-white/80 text-lg">Más de 400 unidades con GPS, cámaras y mantenimiento preventivo para reducir riesgos en cada kilómetro.</p>
+      <ul class="mt-6 space-y-3">
+        <li class="flex gap-3"><i class="bi bi-check-circle-fill text-aqua"></i> Seguro de carga incluido</li>
+        <li class="flex gap-3"><i class="bi bi-check-circle-fill text-aqua"></i> Operadores certificados</li>
+        <li class="flex gap-3"><i class="bi bi-check-circle-fill text-aqua"></i> Atención 24/7</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES -->
+<section id="opiniones" class="relative py-24 overflow-hidden">
+  <div class="absolute -bottom-10 left-1/4 h-80 w-80 rounded-full bg-violet/50 blur-3xl"></div>
+  <div class="relative mx-auto max-w-6xl px-5">
+    <h2 class="text-3xl sm:text-5xl font-bold">Lo que dicen nuestros clientes</h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <blockquote class="glass rounded-3xl p-7"><p>“Redujimos nuestros tiempos de entrega en una semana completa.”</p><footer class="mt-4 text-aqua font-semibold">Laura M. · Retail</footer></blockquote>
+      <blockquote class="glass rounded-3xl p-7"><p>“El rastreo en vivo nos da tranquilidad con cada envío.”</p><footer class="mt-4 text-aqua font-semibold">Carlos R. · Manufactura</footer></blockquote>
+      <blockquote class="glass rounded-3xl p-7"><p>“Atención rápida y tarifas claras, sin letras chiquitas.”</p><footer class="mt-4 text-aqua font-semibold">Ana P. · E-commerce</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="glass border-x-0 border-b-0 rounded-none">
+  <div class="mx-auto max-w-6xl px-5 py-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+    <div class="text-center md:text-left"><p class="text-xl font-bold"><i class="bi bi-box-seam text-aqua"></i> AeroLink Logistics</p><p class="text-white/70 text-sm mt-1">contacto@aerolink.example · +52 55 0000 0000</p></div>
+    <div class="flex gap-3 text-xl">
+      <a href="#" aria-label="Facebook" class="glass h-11 w-11 rounded-full grid place-items-center hover:bg-white/30"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram" class="glass h-11 w-11 rounded-full grid place-items-center hover:bg-white/30"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="X" class="glass h-11 w-11 rounded-full grid place-items-center hover:bg-white/30"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" aria-label="LinkedIn" class="glass h-11 w-11 rounded-full grid place-items-center hover:bg-white/30"><i class="bi bi-linkedin"></i></a>
+      <a href="#" aria-label="WhatsApp" class="glass h-11 w-11 rounded-full grid place-items-center hover:bg-white/30"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+  <p class="text-center text-xs text-white/50 pb-6">© 2026 AeroLink Logistics. Sitio de demostración.</p>
+</footer>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('mobileMenu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&!t.dataset.fb){t.dataset.fb=1;t.src='https://loremflickr.com/1200/800/'+(t.dataset.kw||'truck,cargo')+'?lock='+(t.src.length%90)}},true);
+</script>
+</body>
+</html>

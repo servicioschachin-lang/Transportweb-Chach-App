@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRUTE FREIGHT | Carga pesada sin vueltas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{display:['"Archivo Black"','sans-serif'],mono:['"Space Mono"','monospace']},colors:{yel:'#ffe600',red:'#ff3b30',blk:'#000'}}}}</script>
+<style>
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  .box{border:4px solid #000;box-shadow:8px 8px 0 #000}
+  .box-sm{border:3px solid #000;box-shadow:5px 5px 0 #000}
+  .hard-btn{display:inline-block;border:4px solid #000;box-shadow:6px 6px 0 #000;font-family:'Archivo Black';text-transform:uppercase;padding:.8rem 1.6rem;transition:transform .08s,box-shadow .08s;text-align:center}
+  .hard-btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 #000}
+  .hard-btn:active{transform:translate(6px,6px);box-shadow:0 0 0 #000}
+  .inp{border:4px solid #000;background:#fff;padding:.8rem 1rem;width:100%;font-family:'Space Mono';outline:none}
+  .inp:focus{background:#ffe600;box-shadow:6px 6px 0 #000}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marq{display:flex;width:max-content;animation:slide 22s linear infinite}
+  @media (prefers-reduced-motion:reduce){.marq{animation:none}}
+  a:focus-visible,button:focus-visible{outline:4px solid #ff3b30;outline-offset:3px}
+</style>
+</head>
+<body class="bg-yel text-blk font-mono antialiased">
+
+<header class="sticky top-0 z-50 bg-white border-b-4 border-blk">
+  <div class="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
+    <a href="#inicio" class="font-display text-2xl uppercase tracking-tight"><span class="bg-blk text-yel px-2">BRUTE</span> FREIGHT</a>
+    <nav class="hidden md:flex items-center gap-6 font-bold uppercase text-sm">
+      <a class="hover:underline decoration-4" href="#servicios">Servicios</a><a class="hover:underline decoration-4" href="#flota">Flota</a><a class="hover:underline decoration-4" href="#tarifas">Tarifas</a><a class="hover:underline decoration-4" href="#contacto">Contacto</a>
+      <a class="hard-btn bg-red text-white !py-2 !px-4 !text-sm" href="#contacto">Cotizar</a>
+    </nav>
+    <button id="burger" class="md:hidden box-sm bg-yel h-11 w-11 text-2xl grid place-items-center" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </div>
+  <div id="mobile" class="hidden md:hidden border-t-4 border-blk bg-yel">
+    <nav class="flex flex-col font-display uppercase text-xl">
+      <a class="px-4 py-4 border-b-4 border-blk" href="#servicios">Servicios</a><a class="px-4 py-4 border-b-4 border-blk" href="#flota">Flota</a><a class="px-4 py-4 border-b-4 border-blk" href="#tarifas">Tarifas</a><a class="px-4 py-4 border-b-4 border-blk" href="#contacto">Contacto</a>
+      <a class="px-4 py-4 bg-red text-white" href="#contacto">Cotizar ahora</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="px-4 py-12 md:py-20">
+  <div class="mx-auto max-w-7xl grid lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-7">
+      <h1 class="font-display uppercase text-5xl sm:text-7xl xl:text-8xl leading-[.92]">Mueve tu carga. Sin adornos.</h1>
+      <p class="mt-6 text-lg max-w-xl bg-white box-sm p-4">Tráileres, plataformas y cajas secas para cargas pesadas. Precio fijo, chofer asignado y entrega confirmada por escrito.</p>
+      <div class="mt-8 flex flex-wrap gap-5"><a href="#contacto" class="hard-btn bg-red text-white">Pedir cotización</a><a href="#flota" class="hard-btn bg-white">Ver flota</a></div>
+    </div>
+    <div class="lg:col-span-5"><div class="box bg-white p-2 rotate-2"><img class="w-full h-[380px] object-cover grayscale contrast-125" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1200&q=80" data-kw="truck,freight" alt="Tráiler de carga"></div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-blk text-yel border-y-4 border-blk overflow-hidden py-3" aria-hidden="true">
+  <div class="marq font-display uppercase text-2xl whitespace-nowrap">
+    <span class="px-6">Carga completa ★ Carga parcial ★ Maquinaria ★ Contenedores ★ Rutas nacionales ★</span>
+    <span class="px-6">Carga completa ★ Carga parcial ★ Maquinaria ★ Contenedores ★ Rutas nacionales ★</span>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="px-4 py-16 md:py-24">
+  <div class="mx-auto max-w-7xl">
+    <h2 class="font-display uppercase text-4xl sm:text-6xl">Qué movemos</h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-8">
+      <article class="box bg-white p-6"><i class="bi bi-truck text-5xl"></i><h3 class="font-display uppercase text-2xl mt-3">Carga seca</h3><p class="mt-2">Pallets, cajas y mercancía general en cajas de 48 y 53 pies.</p></article>
+      <article class="box bg-red text-white p-6"><i class="bi bi-gear-wide-connected text-5xl"></i><h3 class="font-display uppercase text-2xl mt-3">Maquinaria</h3><p class="mt-2">Plataformas y cama baja para equipo industrial y agrícola.</p></article>
+      <article class="box bg-white p-6"><i class="bi bi-box-seam text-5xl"></i><h3 class="font-display uppercase text-2xl mt-3">Contenedores</h3><p class="mt-2">Arrastre de contenedores desde puerto a patio o planta.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FLOTA con imagen de fondo -->
+<section id="flota" class="relative border-y-4 border-blk overflow-hidden">
+  <img class="absolute inset-0 h-full w-full object-cover grayscale" src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1800&q=80" data-kw="containers,port" alt="">
+  <div class="absolute inset-0 bg-blk/60"></div>
+  <div class="relative mx-auto max-w-7xl px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
+    <h2 class="font-display uppercase text-4xl sm:text-6xl text-yel">400 camiones. Cero excusas.</h2>
+    <div class="box bg-yel p-6"><ul class="font-bold space-y-3"><li><i class="bi bi-check-square-fill mr-2"></i>GPS y bloqueo remoto</li><li><i class="bi bi-check-square-fill mr-2"></i>Mantenimiento cada 10,000 km</li><li><i class="bi bi-check-square-fill mr-2"></i>Seguro de mercancía incluido</li><li><i class="bi bi-check-square-fill mr-2"></i>Choferes con 5+ años de experiencia</li></ul></div>
+  </div>
+</section>
+
+<!-- TARIFAS -->
+<section id="tarifas" class="px-4 py-16 md:py-24">
+  <div class="mx-auto max-w-7xl">
+    <h2 class="font-display uppercase text-4xl sm:text-6xl">Tarifas base</h2>
+    <div class="box bg-white mt-10 overflow-x-auto"><table class="w-full text-left min-w-[480px]">
+      <thead class="bg-blk text-yel font-display uppercase"><tr><th class="p-4">Unidad</th><th class="p-4">Capacidad</th><th class="p-4">Por km</th></tr></thead>
+      <tbody class="[&>tr]:border-t-4 [&>tr]:border-blk [&_td]:p-4 font-bold"><tr><td>Rabón</td><td>8 ton</td><td>$14</td></tr><tr class="bg-yel"><td>Tráiler 53'</td><td>25 ton</td><td>$22</td></tr><tr><td>Plataforma</td><td>30 ton</td><td>$26</td></tr><tr class="bg-yel"><td>Cama baja</td><td>40 ton</td><td>$38</td></tr></tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="px-4 pb-16 md:pb-24">
+  <div class="mx-auto max-w-5xl box bg-white p-6 sm:p-10">
+    <h2 class="font-display uppercase text-3xl sm:text-5xl">Pide tu cotización</h2>
+    <form class="mt-6 grid sm:grid-cols-2 gap-5" onsubmit="event.preventDefault();this.querySelector('button').textContent='Enviado ✔'">
+      <input class="inp" placeholder="Empresa" required><input type="email" class="inp" placeholder="Correo" required>
+      <input class="inp" placeholder="Origen"><input class="inp" placeholder="Destino">
+      <textarea class="inp sm:col-span-2" rows="3" placeholder="Qué vas a mover y cuánto pesa"></textarea>
+      <button class="hard-btn bg-red text-white sm:col-span-2">Enviar solicitud</button>
+    </form>
+  </div>
+</section>
+
+<footer class="bg-blk text-yel border-t-4 border-blk">
+  <div class="mx-auto max-w-7xl px-4 py-10 flex flex-col md:flex-row gap-6 items-center justify-between">
+    <p class="text-center md:text-left"><b class="font-display uppercase text-xl">Brute Freight</b><br><span class="text-sm text-white/70">© 2026 · Sitio de demostración</span></p>
+    <div class="flex gap-3 text-xl">
+      <a href="#" aria-label="Facebook" class="h-12 w-12 grid place-items-center bg-yel text-blk border-2 border-yel hover:bg-red hover:text-white"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram" class="h-12 w-12 grid place-items-center bg-yel text-blk border-2 border-yel hover:bg-red hover:text-white"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="X" class="h-12 w-12 grid place-items-center bg-yel text-blk border-2 border-yel hover:bg-red hover:text-white"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" aria-label="LinkedIn" class="h-12 w-12 grid place-items-center bg-yel text-blk border-2 border-yel hover:bg-red hover:text-white"><i class="bi bi-linkedin"></i></a>
+      <a href="#" aria-label="WhatsApp" class="h-12 w-12 grid place-items-center bg-yel text-blk border-2 border-yel hover:bg-red hover:text-white"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('mobile');
+b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&!t.dataset.fb){t.dataset.fb=1;t.src='https://loremflickr.com/1200/800/'+(t.dataset.kw||'truck')+'?lock='+(t.src.length%90)}},true);
+</script>
+</body>
+</html>

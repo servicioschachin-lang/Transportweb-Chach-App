@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoftRoute Cargo | Envíos y mensajería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  :root{--bg:#e0e5ec;--sh-d:#a3b1c6;--sh-l:#ffffff;--ink:#3d4852;--accent:#0d9488}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}
+  h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400}
+  .raised{background:var(--bg);border-radius:28px;box-shadow:9px 9px 18px var(--sh-d),-9px -9px 18px var(--sh-l)}
+  .raised-sm{background:var(--bg);border-radius:16px;box-shadow:5px 5px 10px var(--sh-d),-5px -5px 10px var(--sh-l)}
+  .inset{background:var(--bg);border-radius:18px;box-shadow:inset 6px 6px 12px var(--sh-d),inset -6px -6px 12px var(--sh-l)}
+  .nm-btn{background:var(--bg);color:var(--ink);border:0;border-radius:16px;padding:.8rem 1.8rem;font-weight:700;box-shadow:6px 6px 12px var(--sh-d),-6px -6px 12px var(--sh-l);transition:box-shadow .2s,color .2s}
+  .nm-btn:hover{color:var(--accent)}
+  .nm-btn:active{box-shadow:inset 4px 4px 8px var(--sh-d),inset -4px -4px 8px var(--sh-l)}
+  .nm-btn.primary{color:var(--accent)}
+  .nm-input{background:var(--bg);border:0;border-radius:16px;padding:.9rem 1.2rem;color:var(--ink);box-shadow:inset 5px 5px 10px var(--sh-d),inset -5px -5px 10px var(--sh-l)}
+  .nm-input:focus{background:var(--bg);color:var(--ink);box-shadow:inset 5px 5px 10px var(--sh-d),inset -5px -5px 10px var(--sh-l),0 0 0 3px rgba(13,148,136,.4)}
+  .icon-well{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;color:var(--accent);box-shadow:inset 5px 5px 10px var(--sh-d),inset -5px -5px 10px var(--sh-l)}
+  .navbar{background:var(--bg);box-shadow:0 6px 14px rgba(163,177,198,.5)}
+  .navbar .nav-link{color:var(--ink);font-weight:500}.navbar .nav-link:hover{color:var(--accent)}
+  .navbar-toggler{border:0;border-radius:12px;box-shadow:4px 4px 8px var(--sh-d),-4px -4px 8px var(--sh-l)}
+  .navbar-toggler:focus{box-shadow:0 0 0 3px rgba(13,148,136,.4)}
+  .photo{border-radius:28px;padding:10px;background:var(--bg);box-shadow:inset 7px 7px 14px var(--sh-d),inset -7px -7px 14px var(--sh-l)}
+  .photo img{width:100%;height:100%;min-height:340px;object-fit:cover;border-radius:20px}
+  .section{padding:5.5rem 0}
+  .accent{color:var(--accent)}
+  .social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:var(--ink);text-decoration:none;box-shadow:5px 5px 10px var(--sh-d),-5px -5px 10px var(--sh-l)}
+  .social a:hover{color:var(--accent);box-shadow:inset 3px 3px 6px var(--sh-d),inset -3px -3px 6px var(--sh-l)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#inicio" style="color:var(--ink)"><i class="bi bi-send-fill accent me-2"></i>SoftRoute</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-label="Abrir menú"><i class="bi bi-list fs-3"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center py-3 py-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rastreo">Rastreo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item mt-2 mt-lg-0"><a class="nm-btn primary d-inline-block text-decoration-none" href="#rastreo">Rastrear envío</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio" class="section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h1 class="display-3 lh-1">Envíos suaves, entregas sin tropiezos.</h1>
+        <p class="fs-5 mt-4 opacity-75">Mensajería y paquetería nacional con recolección a domicilio, empaque seguro y confirmación de entrega.</p>
+        <div class="d-flex flex-wrap gap-4 mt-4"><a href="#planes" class="nm-btn primary text-decoration-none">Ver planes</a><a href="#servicios" class="nm-btn text-decoration-none">Servicios</a></div>
+      </div>
+      <div class="col-lg-6"><div class="photo"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1400&q=80" data-kw="packages,delivery" alt="Paquetes listos para envío"></div></div>
+    </div>
+  </div>
+</header>
+
+<section id="servicios" class="section">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">Lo que hacemos por ti</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><div class="icon-well mx-auto mb-3"><i class="bi bi-box2"></i></div><h3 class="h4">Paquetería</h3><p class="opacity-75 mb-0">Cajas y sobres hasta 30 kg con entrega en 24 a 72 horas.</p></div></div>
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><div class="icon-well mx-auto mb-3"><i class="bi bi-lightning-charge"></i></div><h3 class="h4">Mismo día</h3><p class="opacity-75 mb-0">Mensajería urgente dentro de la ciudad en menos de 4 horas.</p></div></div>
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><div class="icon-well mx-auto mb-3"><i class="bi bi-building"></i></div><h3 class="h4">Empresas</h3><p class="opacity-75 mb-0">Rutas programadas, facturación mensual y soporte dedicado.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="rastreo" class="section">
+  <div class="container">
+    <div class="raised p-4 p-md-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5"><h2 class="display-6">¿Dónde está mi paquete?</h2><p class="opacity-75 mb-0">Escribe tu número de guía para ver el estado actual.</p></div>
+        <div class="col-lg-7">
+          <form class="d-flex flex-column flex-sm-row gap-3" onsubmit="event.preventDefault();document.getElementById('estado').hidden=false">
+            <input class="nm-input flex-grow-1" placeholder="Ej. SR-48201937" aria-label="Número de guía" required>
+            <button class="nm-btn primary">Rastrear</button>
+          </form>
+          <div id="estado" class="inset p-3 mt-4" hidden><i class="bi bi-truck accent me-2"></i><strong>En tránsito</strong> · Centro de distribución Norte · Entrega estimada mañana</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 order-lg-2"><div class="photo"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1400&q=80" data-kw="warehouse,shelves" alt="Bodega ordenada"></div></div>
+      <div class="col-lg-6"><h2 class="display-6">Cuidado en cada paso</h2><p class="opacity-75 fs-5">Revisamos, empacamos y escaneamos cada envío antes de salir. Si algo cambia en el camino, te avisamos por mensaje.</p>
+        <ul class="list-unstyled mt-4 d-grid gap-3">
+          <li class="inset p-3"><i class="bi bi-check2-circle accent me-2"></i>Embalaje reforzado incluido</li>
+          <li class="inset p-3"><i class="bi bi-check2-circle accent me-2"></i>Aviso de entrega por WhatsApp</li>
+          <li class="inset p-3"><i class="bi bi-check2-circle accent me-2"></i>Seguro opcional hasta $50,000</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="planes" class="section">
+  <div class="container">
+    <h2 class="display-5 text-center mb-5">Planes simples</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><h3 class="h4">Básico</h3><p class="display-6 my-3">$59<small class="fs-6 opacity-75">/envío</small></p><p class="opacity-75">Hasta 5 kg · 72 h</p><button class="nm-btn w-100 mt-2">Elegir</button></div></div>
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><h3 class="h4 accent">Plus</h3><p class="display-6 my-3">$99<small class="fs-6 opacity-75">/envío</small></p><p class="opacity-75">Hasta 15 kg · 48 h · seguro</p><button class="nm-btn primary w-100 mt-2">Elegir</button></div></div>
+      <div class="col-md-4"><div class="raised p-4 h-100 text-center"><h3 class="h4">Empresa</h3><p class="display-6 my-3">A medida</p><p class="opacity-75">Volumen y rutas fijas</p><button class="nm-btn w-100 mt-2">Cotizar</button></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5"><h2 class="display-6">Escríbenos</h2><p class="opacity-75">Respondemos en menos de una hora hábil.</p><p><i class="bi bi-envelope accent me-2"></i>hola@softroute.example</p><p><i class="bi bi-telephone accent me-2"></i>+52 55 3333 4444</p></div>
+      <div class="col-lg-7"><form class="raised p-4 d-grid gap-3" onsubmit="event.preventDefault();this.querySelector('button').textContent='¡Enviado!'"><input class="nm-input" placeholder="Nombre" required><input type="email" class="nm-input" placeholder="Correo" required><textarea class="nm-input" rows="4" placeholder="¿En qué te ayudamos?"></textarea><button class="nm-btn primary">Enviar mensaje</button></form></div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-5" style="box-shadow:0 -6px 14px rgba(163,177,198,.45)">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+    <div class="text-center text-md-start"><strong><i class="bi bi-send-fill accent"></i> SoftRoute Cargo</strong><br><small class="opacity-75">© 2026 · Sitio de demostración</small></div>
+    <div class="social d-flex gap-3"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{const c=bootstrap.Collapse.getInstance(document.getElementById('nav'));c&&c.hide()}));
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&!t.dataset.fb){t.dataset.fb=1;t.src='https://loremflickr.com/1200/800/'+(t.dataset.kw||'packages')+'?lock='+(t.src.length%90)}},true);
+</script>
+</body>
+</html>

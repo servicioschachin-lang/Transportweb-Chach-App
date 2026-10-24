@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransFun Mudanzas | Mudanzas sin estrés</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Fredoka','sans-serif']},colors:{peach:'#ffd6c2',mint:'#bff0d9',lilac:'#d8c8ff',sun:'#ffe27a',plum:'#3b2f5c',coral:'#ff8a6b'}}}}</script>
+<style>
+  html{scroll-behavior:smooth;scroll-padding-top:100px}
+  body{background:#fff4ec}
+  .clay{border-radius:36px;box-shadow:12px 12px 24px rgba(59,47,92,.18),inset -8px -8px 16px rgba(59,47,92,.10),inset 8px 8px 16px rgba(255,255,255,.75)}
+  .clay-sm{border-radius:22px;box-shadow:6px 6px 14px rgba(59,47,92,.18),inset -4px -4px 8px rgba(59,47,92,.10),inset 4px 4px 8px rgba(255,255,255,.75)}
+  .clay-btn{border-radius:999px;font-weight:600;padding:.9rem 2rem;box-shadow:8px 8px 16px rgba(59,47,92,.25),inset -5px -5px 10px rgba(0,0,0,.12),inset 5px 5px 10px rgba(255,255,255,.55);transition:transform .15s,box-shadow .15s;display:inline-block;text-align:center}
+  .clay-btn:hover{transform:translateY(-3px)}
+  .clay-btn:active{transform:translateY(2px);box-shadow:3px 3px 8px rgba(59,47,92,.25),inset -3px -3px 6px rgba(0,0,0,.12),inset 3px 3px 6px rgba(255,255,255,.55)}
+  .clay-in{border-radius:20px;background:#fff;padding:.9rem 1.2rem;width:100%;outline:none;box-shadow:inset 5px 5px 10px rgba(59,47,92,.15),inset -4px -4px 8px #fff}
+  .clay-in:focus{box-shadow:inset 5px 5px 10px rgba(59,47,92,.15),0 0 0 4px rgba(255,138,107,.5)}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .bob{animation:bob 4s ease-in-out infinite}
+  @media (prefers-reduced-motion:reduce){.bob{animation:none}}
+  a:focus-visible,button:focus-visible{outline:4px solid #ff8a6b;outline-offset:3px}
+</style>
+</head>
+<body class="font-sans text-plum antialiased">
+
+<header class="sticky top-0 z-50 px-4 pt-3">
+  <nav class="clay bg-white/90 mx-auto max-w-6xl px-5 py-3 flex items-center justify-between !rounded-[28px]">
+    <a href="#inicio" class="text-2xl font-bold flex items-center gap-2"><span class="clay-sm bg-sun h-10 w-10 grid place-items-center text-xl"><i class="bi bi-truck-front-fill"></i></span>TransFun</a>
+    <ul class="hidden md:flex items-center gap-7 font-medium">
+      <li><a class="hover:text-coral" href="#servicios">Servicios</a></li><li><a class="hover:text-coral" href="#pasos">Cómo es</a></li><li><a class="hover:text-coral" href="#precios">Precios</a></li><li><a class="hover:text-coral" href="#contacto">Contacto</a></li>
+      <li><a href="#contacto" class="clay-btn bg-coral text-white !py-2.5">Cotizar gratis</a></li>
+    </ul>
+    <button id="burger" class="md:hidden clay-sm bg-lilac h-11 w-11 text-2xl grid place-items-center" aria-label="Abrir menú" aria-expanded="false"><i class="bi bi-list"></i></button>
+  </nav>
+  <div id="mobile" class="hidden md:hidden mx-auto max-w-6xl mt-3">
+    <div class="clay bg-white p-5 grid gap-3 text-center text-lg font-medium">
+      <a href="#servicios">Servicios</a><a href="#pasos">Cómo es</a><a href="#precios">Precios</a><a href="#contacto">Contacto</a>
+      <a href="#contacto" class="clay-btn bg-coral text-white">Cotizar gratis</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="px-4 pt-10 pb-20">
+  <div class="mx-auto max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-5xl sm:text-6xl font-bold leading-[1.05]">Mudarte puede ser divertido.</h1>
+      <p class="mt-5 text-xl text-plum/80">Empacamos, cargamos, transportamos y acomodamos. Tú solo eliges la música para el camino.</p>
+      <div class="mt-8 flex flex-wrap gap-4"><a href="#contacto" class="clay-btn bg-coral text-white">Quiero cotizar</a><a href="#servicios" class="clay-btn bg-mint">Ver servicios</a></div>
+    </div>
+    <div class="relative">
+      <div class="clay bg-lilac p-4 bob"><img class="rounded-[26px] w-full h-[360px] object-cover" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80" data-kw="moving,truck" alt="Camión de mudanzas"></div>
+      <div class="clay-sm bg-sun absolute -bottom-6 -left-3 sm:-left-8 px-5 py-3 font-semibold"><i class="bi bi-star-fill text-coral"></i> 4.9 · +3,000 mudanzas</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="px-4 py-20">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-4xl sm:text-5xl font-bold text-center">Todo lo que necesitas</h2>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+      <article class="clay bg-peach p-6 text-center"><div class="clay-sm bg-white h-16 w-16 mx-auto grid place-items-center text-3xl"><i class="bi bi-house-heart"></i></div><h3 class="mt-4 text-xl font-semibold">Casa y depto</h3><p class="mt-1 text-plum/75">Mudanza completa con cuidado de muebles.</p></article>
+      <article class="clay bg-mint p-6 text-center"><div class="clay-sm bg-white h-16 w-16 mx-auto grid place-items-center text-3xl"><i class="bi bi-building"></i></div><h3 class="mt-4 text-xl font-semibold">Oficinas</h3><p class="mt-1 text-plum/75">Cambio de sede en fin de semana.</p></article>
+      <article class="clay bg-lilac p-6 text-center"><div class="clay-sm bg-white h-16 w-16 mx-auto grid place-items-center text-3xl"><i class="bi bi-box-seam"></i></div><h3 class="mt-4 text-xl font-semibold">Empaque</h3><p class="mt-1 text-plum/75">Cajas, burbuja y cinta incluidos.</p></article>
+      <article class="clay bg-sun p-6 text-center"><div class="clay-sm bg-white h-16 w-16 mx-auto grid place-items-center text-3xl"><i class="bi bi-archive"></i></div><h3 class="mt-4 text-xl font-semibold">Bodegaje</h3><p class="mt-1 text-plum/75">Guarda tus cosas por días o meses.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PASOS (con fondo de imagen) -->
+<section id="pasos" class="relative px-4 py-24 overflow-hidden">
+  <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80" data-kw="boxes,warehouse" alt="">
+  <div class="absolute inset-0 bg-plum/70"></div>
+  <div class="relative mx-auto max-w-6xl">
+    <h2 class="text-4xl sm:text-5xl font-bold text-white">Así de fácil</h2>
+    <ol class="mt-10 grid md:grid-cols-3 gap-7">
+      <li class="clay bg-peach p-7"><span class="clay-sm bg-white inline-grid h-12 w-12 place-items-center font-bold text-xl">1</span><h3 class="mt-3 text-xl font-semibold">Cuéntanos</h3><p class="text-plum/80">Dinos cuánto y a dónde mudarte.</p></li>
+      <li class="clay bg-mint p-7"><span class="clay-sm bg-white inline-grid h-12 w-12 place-items-center font-bold text-xl">2</span><h3 class="mt-3 text-xl font-semibold">Nosotros cargamos</h3><p class="text-plum/80">Llegamos con equipo y camión.</p></li>
+      <li class="clay bg-sun p-7"><span class="clay-sm bg-white inline-grid h-12 w-12 place-items-center font-bold text-xl">3</span><h3 class="mt-3 text-xl font-semibold">Estrena casa</h3><p class="text-plum/80">Dejamos todo en su lugar.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section id="precios" class="px-4 py-20">
+  <div class="mx-auto max-w-6xl">
+    <h2 class="text-4xl sm:text-5xl font-bold text-center">Precios claros</h2>
+    <div class="mt-12 grid md:grid-cols-3 gap-7 items-stretch">
+      <div class="clay bg-white p-7 text-center"><h3 class="text-xl font-semibold">Mini</h3><p class="text-5xl font-bold my-4">$1,490</p><p class="text-plum/75">Estudio o cuarto · 2 cargadores</p><a href="#contacto" class="clay-btn bg-mint mt-5">Elegir</a></div>
+      <div class="clay bg-coral text-white p-7 text-center md:scale-105"><h3 class="text-xl font-semibold">Familiar</h3><p class="text-5xl font-bold my-4">$3,290</p><p>Casa de 2 recámaras · 3 cargadores</p><a href="#contacto" class="clay-btn bg-white text-plum mt-5">Elegir</a></div>
+      <div class="clay bg-white p-7 text-center"><h3 class="text-xl font-semibold">Grande</h3><p class="text-5xl font-bold my-4">$5,900</p><p class="text-plum/75">Casa de 4 recámaras · 5 cargadores</p><a href="#contacto" class="clay-btn bg-lilac mt-5">Elegir</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="px-4 pb-20">
+  <div class="mx-auto max-w-4xl clay bg-sun p-7 sm:p-10">
+    <h2 class="text-3xl sm:text-4xl font-bold">Cotiza tu mudanza gratis</h2>
+    <form class="mt-6 grid gap-4 sm:grid-cols-2" onsubmit="event.preventDefault();this.querySelector('button').textContent='¡Listo, te escribimos!'">
+      <input class="clay-in" placeholder="Tu nombre" required><input type="email" class="clay-in" placeholder="Tu correo" required>
+      <input class="clay-in" placeholder="Desde (colonia o ciudad)"><input class="clay-in" placeholder="Hacia (colonia o ciudad)">
+      <textarea class="clay-in sm:col-span-2" rows="3" placeholder="Cuéntanos qué vas a mover"></textarea>
+      <button class="clay-btn bg-coral text-white sm:col-span-2">Enviar solicitud</button>
+    </form>
+  </div>
+</section>
+
+<footer class="px-4 pb-10">
+  <div class="mx-auto max-w-6xl clay bg-lilac p-7 flex flex-col md:flex-row gap-6 items-center justify-between">
+    <p class="text-center md:text-left"><b class="text-xl"><i class="bi bi-truck-front-fill"></i> TransFun Mudanzas</b><br><span class="text-sm">© 2026 · Sitio de demostración</span></p>
+    <div class="flex gap-4 text-xl">
+      <a href="#" aria-label="Facebook" class="clay-sm bg-white h-12 w-12 grid place-items-center hover:-translate-y-1 transition"><i class="bi bi-facebook"></i></a>
+      <a href="#" aria-label="Instagram" class="clay-sm bg-white h-12 w-12 grid place-items-center hover:-translate-y-1 transition"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="TikTok" class="clay-sm bg-white h-12 w-12 grid place-items-center hover:-translate-y-1 transition"><i class="bi bi-tiktok"></i></a>
+      <a href="#" aria-label="YouTube" class="clay-sm bg-white h-12 w-12 grid place-items-center hover:-translate-y-1 transition"><i class="bi bi-youtube"></i></a>
+      <a href="#" aria-label="WhatsApp" class="clay-sm bg-white h-12 w-12 grid place-items-center hover:-translate-y-1 transition"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('mobile');
+b.addEventListener('click',()=>{const o=m.classList.toggle('hidden');b.setAttribute('aria-expanded',!o);b.innerHTML=o?'<i class="bi bi-list"></i>':'<i class="bi bi-x-lg"></i>'});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.add('hidden');b.innerHTML='<i class="bi bi-list"></i>'}));
+document.addEventListener('error',e=>{const t=e.target;if(t.tagName==='IMG'&&!t.dataset.fb){t.dataset.fb=1;t.src='https://loremflickr.com/1200/800/'+(t.dataset.kw||'truck')+'?lock='+(t.src.length%90)}},true);
+</script>
+</body>
+</html>
