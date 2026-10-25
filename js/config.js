@@ -18,6 +18,7 @@ export const CONFIG = {
     { nombre: 'Plantilla 09', url: 'plantillas/10-minimalismo-multipage.html' },
     { nombre: 'Plantilla 10', url: 'plantillas/07-brutalismo-landing.html' },
     { nombre: 'Plantilla 11', url: 'plantillas/06-claymorfismo-multipage.html' },
+{ nombre: 'Plantilla 12', url: 'https://transportesxilo.empresagt.com' },
   ]
 };
 
