@@ -19,6 +19,8 @@ export const CONFIG = {
     { nombre: 'Plantilla 09', url: 'plantillas/10-minimalismo-multipage.html' },
     { nombre: 'Plantilla 10', url: 'plantillas/07-brutalismo-landing.html' },
     { nombre: 'Plantilla 11', url: 'plantillas/05-claymorfismo-landing.html' },
+    { nombre: 'Plantilla 12', url: 'https://paginavi.chach.workers.dev' },
+    { nombre: 'Plantilla 13', url: 'https://transportesxilo.empresagt.com' },
   ]
 };
 
